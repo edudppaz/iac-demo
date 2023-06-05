@@ -45,7 +45,7 @@ def make_pr(yaml_data):
 
     # Commit the changes
     print("Committing")
-    repo.git.add(file_path)
+    repo.git.add(all=True)
     repo.git.commit('-m', 'Added a new line to README.md')
 
     # Push the new branch
