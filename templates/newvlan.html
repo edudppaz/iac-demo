@@ -1,20 +1,17 @@
 {% extends "bootstrap/base.html" %}
 
-{% block title %}Endpoint Registration Tool{% endblock %}
+{% block title %}Customer PR Tool{% endblock %}
 {% block content %}
 <body>
         <div class="container-fluid pt-3">
             <div class="row pt-5">
                 <div class="col"></div>
-                <div class="col">Code Debug, result:</div>
+                <div class="col">Code Debug, new data result:</div>
                 <div class="col"></div>
             </div>
             <div class="row pt-5">
-                <div class="col">{{ vlan_name }}</div>
-                <div class="col">{{ vlan_id }}</div>
-                <div class="col">{{ device }}</div>
+                <div class="col">{{ new_data }}</div>
             </div>
-            
         </div>
     </body>
 {% endblock %}

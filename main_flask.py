@@ -32,12 +32,10 @@ def newvlan():
            "loopback": f"192.168.{vlan_id}.100"
         }
     }
-    make_pr(yaml_data)
+    new_data = make_pr(yaml_data)
     return render_template(
         "newvlan.html",
-        vlan_name=vlan_name,
-        vlan_id=vlan_id,
-        device=device,
+        new_data = json.dumps(new_data, indent=4),
     )
 
 if __name__ == "__main__":

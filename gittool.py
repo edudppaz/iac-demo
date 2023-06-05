@@ -69,3 +69,4 @@ def make_pr(yaml_data):
     print("Cleaning up")
     repo.git.checkout('main')
     repo.git.branch('-D', new_branch)
+    return merged_data
