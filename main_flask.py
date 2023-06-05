@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # from pypsrp.client import Client
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, make_response, jsonify
 from flask_bootstrap import Bootstrap
 from os import environ
 from gittool import make_pr
@@ -33,10 +33,14 @@ def newvlan():
         }
     }
     new_data = make_pr(yaml_data)
-    return render_template(
-        "newvlan.html",
-        new_data=json.dumps(new_data,indent=4),
+    response = make_response(
+        jsonify(
+            new_data
+        ),
+        401,
     )
+    response.headers["Content-Type"] = "application/json"
+    return response
 
 if __name__ == "__main__":
     app.run()
