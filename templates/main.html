@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}New Customer Tool{% endblock %}
+{% block content %}
+<body>
+        <div class="container pt-5">
+            <h3>New customer</h3>
+            <h4>Please fill the required information:</h5>
+            <p></p>
+            <h5>Choose a device:</h5>
+            <form action="{{  url_for('newvlan') }}" method="post", role="form">
+                <div class="form-group">
+                    <select class="form-control" name="device_choice", id="device_choice">
+                        {% for device in devices %}
+                            <option value="{{ device }}"> {{ device }}</option>
+                        {% endfor %}
+                    </select>
+                    </div>
+                    <p></p>
+                    <input name="vlan_name" class="form-control" id="vlan_name" rows="1" placeholder="Enter customer VLAN Name" required>
+                    <p></p>
+                    <input name="vlan_id" class="form-control" id="vlan_id" rows="1" placeholder="Enter customer VLAN ID (Integer 1-255)" required>
+                    <p></p>
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+</body>
+{% endblock %}

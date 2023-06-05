@@ -1,19 +1,20 @@
-vrfs:
-  - name: 'CUS_A'
-    route_target: '65500:10'
-    vlan_id: '10'
-    linknett: '192.168.10.0'
-    loopback: '192.168.10.100'
-  - name: 'CUS_B'
-    route_target: '65500:20'
-    vlan_id: '20'
-    linknett: '192.168.20.0'
-    loopback: '192.168.20.100'
-  - name: 'CUS_C'
-    route_target: '65500:30'
-    vlan_id: '30'
-    linknett: '192.168.30.0'
-    loopback: '192.168.30.100'
 bgp_as: '65500'
+bgp_interface: GigabitEthernet0/1
 bgp_remote_as: '65400'
-bgp_interface: 'GigabitEthernet0/1'
+vrfs:
+- linknett: 192.168.10.0
+  loopback: 192.168.10.100
+  name: CUS_A
+  vlan_id: '10'
+- linknett: 192.168.20.0
+  loopback: 192.168.20.100
+  name: CUS_B
+  vlan_id: '20'
+- linknett: 192.168.30.0
+  loopback: 192.168.30.100
+  name: CUS_C
+  vlan_id: '30'
+- linknett: 192.168.40.0
+  loopback: 192.168.40.100
+  name: CUST_D
+  vlan_id: '40'

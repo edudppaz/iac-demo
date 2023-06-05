@@ -4,3 +4,9 @@ nornir-utils
 genie
 pyats
 urllib3==1.26.15
+flask
+flask-bootstrap
+flask-session
+python-dotenv
+GitPython
+PyGithub
