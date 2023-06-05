@@ -11,6 +11,11 @@ interface Loopback{{ vrf.vlan_id }}
  vrf forwarding {{ vrf.name }}
  ip address {{ vrf.loopback }} 255.255.255.255
 !
+interface GigabitEthernet0/1.{{ vrf.vlan_id }}
+ encapsulation dot1Q {{ vrf.vlan_id }}
+ vrf forwarding {{ vrf.name }}
+ ip address {{ vrf.linknett | first_ip }} 255.255.255.252
+!
 {% endfor %}
 !
 router bgp {{ bgp_as }}
