@@ -8,12 +8,6 @@ def make_pr(yaml_data):
     # Local repository path
     repo_path = '/Users/edpozo/Git/iac-demo'
 
-    # File path relative to the repository root
-    file_path = 'README.md'
-
-    # New line to add
-    
-    # Create a new branch
     repo = git.Repo(repo_path)
 
     # Checkout the main branch and pull the latest changes
@@ -67,5 +61,7 @@ def make_pr(yaml_data):
 
     # # Clean up - checkout main branch and delete the local branch
     print("Cleaning up")
+    repo = git.Repo(repo_path)
     repo.git.checkout('main')
     repo.git.branch('-D', new_branch)
+    return merged_data
