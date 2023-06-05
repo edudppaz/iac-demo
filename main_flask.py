@@ -6,7 +6,7 @@ from flask_bootstrap import Bootstrap
 from os import environ
 from gittool import make_pr
 import config
-import yaml
+import json
 
 app = Flask(__name__)
 app.config.from_object("config.Config")
