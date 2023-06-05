@@ -13,7 +13,7 @@ jobs:
       - name: Checking out repo
         uses: actions/checkout@v3
         with:
-          repository: edudppaz/demo-sopra
+          repository: edudppaz/iac-demo
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepare environment (Python)
