@@ -14,3 +14,7 @@ vrfs:
   loopback: 192.168.30.100
   name: CUS_C
   vlan_id: '30'
+- linknett: 192.168.33.0
+  loopback: 192.168.33.100
+  name: CUS_33
+  vlan_id: '33'
