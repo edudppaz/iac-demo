@@ -1,0 +1,6 @@
+nornir
+nornir-napalm
+nornir-utils
+genie
+pyats
+urllib3==1.26.15

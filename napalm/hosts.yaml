@@ -1,0 +1,7 @@
+---
+RTR1:
+  hostname: 192.168.86.29
+  username: cisco
+  password: cisco
+  platform: ios
+  port: 22

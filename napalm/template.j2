@@ -1,0 +1,21 @@
+{%- for vrf in vrfs %}
+vrf definition {{ vrf.name }}
+  rd {{ bgp_as }}:{{ vrf.vlan_id }}
+  address-family ipv4
+    route-target export {{ vrf.vlan_id }}:{{ vrf.vlan_id }}
+    route-target import {{ vrf.vlan_id }}:{{ vrf.vlan_id }}
+  !
+interface {{ bgp_interface }}.{{ vrf.vlan_id }}
+  encapsulation dot1q {{ vrf.vlan_id }}
+  vrf forwarding {{ vrf.name }}
+  ip address {{ vrf.linknett | first_ip }} 255.255.255.252
+!
+{%- endfor %}
+!
+router bgp {{ bgp_as }}
+ {% for vrf in vrfs -%}
+ address-family ipv4 vrf {{ vrf.name }}
+  neighbor {{ vrf.linknett | second_ip }} remote-as {{ bgp_remote_as }}
+  neighbor {{ vrf.linknett | second_ip }} activate
+ exit-address-family
+{% endfor -%}
