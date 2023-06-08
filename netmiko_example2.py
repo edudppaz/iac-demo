@@ -14,3 +14,7 @@ for d in devices:
     with ConnectHandler(**d) as net_connect:
         output = net_connect.send_command(command, use_genie=True)
 print(json.dumps(output, indent=4))
+
+for k,v in output.items():
+    for a,v in v.items():
+        print(a)

@@ -1,0 +1,19 @@
+Interface                  IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0         192.168.86.29   YES DHCP   up                    up      
+GigabitEthernet0/1         unassigned      YES unset  up                    up      
+GigabitEthernet0/1.10      192.168.10.1    YES manual up                    up      
+GigabitEthernet0/1.20      192.168.20.1    YES manual up                    up      
+GigabitEthernet0/1.30      unassigned      YES TFTP   deleted               down    
+GigabitEthernet0/1.40      unassigned      YES TFTP   deleted               down    
+GigabitEthernet0/1.150     unassigned      YES TFTP   deleted               down    
+GigabitEthernet0/1.160     unassigned      YES TFTP   deleted               down    
+GigabitEthernet0/1.222     unassigned      YES TFTP   deleted               down    
+GigabitEthernet0/2         unassigned      YES unset  administratively down down    
+GigabitEthernet0/3         unassigned      YES unset  administratively down down    
+Loopback10                 192.168.10.100  YES manual up                    up      
+Loopback20                 192.168.20.100  YES manual up                    up      
+Loopback30                 unassigned      YES TFTP   up                    up      
+Loopback40                 unassigned      YES TFTP   up                    up      
+Loopback150                unassigned      YES TFTP   up                    up      
+Loopback160                unassigned      YES TFTP   up                    up      
+Loopback222                unassigned      YES TFTP   up                    up      
