@@ -18,4 +18,7 @@ vrfs:
   loopback: 192.168.40.100
   name: CUS_D
   vlan_id: '40'
-
+- linknett: 192.168.200.0
+  loopback: 192.168.200.100
+  name: SOPRASTERIA
+  vlan_id: '200'
